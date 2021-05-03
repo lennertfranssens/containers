@@ -1,5 +1,8 @@
 #!/bin/bash
 
+printf 'User password: '
+read PASSWORD
+
 docker rm fedora_container
 docker rmi fedora_container
 docker build --build-arg PASSWORD=$PASSWORD -t fedora_container .
