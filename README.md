@@ -27,3 +27,10 @@ git remote add origin https://github.com/USER/REPO.git
 git remote -v
 git push origin main # or other branch
 ```
+
+# Install lab repo after build
+```bash
+cd /home/user
+git clone https://github.com/lennertfranssens/containers.git
+bash ./setup_bsys2_lab.sh
+```
