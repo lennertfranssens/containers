@@ -32,14 +32,10 @@ RUN \
   apt-get install -y firefox
 
 # change root password
-RUN echo 'root:e=mc**2' | chpasswd
+RUN echo "root:$PASSWORD" | chpasswd
 
-# add user
-RUN useradd -ms /bin/bash user
-RUN echo "user:$PASSWORD" | chpasswd
-RUN usermod -aG sudo user
-
-USER user
+# change working directory
+RUN mkdir /home/user
 WORKDIR /home/user
 
 
