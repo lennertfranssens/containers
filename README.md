@@ -97,3 +97,6 @@ Visit:
 
 ### Using this project on Docker for Windows?
 If you use this project on Docker for Windows, the window redirection is not working. Please visit [this website](https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde) for more information to get it working.
+
+### Useful commands
+[Visit this website.](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/)
