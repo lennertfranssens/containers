@@ -32,5 +32,6 @@ git push origin main # or other branch
 ```bash
 cd /home/user
 git clone https://github.com/lennertfranssens/containers.git
+cd containers
 bash ./setup_bsys2_lab.sh
 ```
