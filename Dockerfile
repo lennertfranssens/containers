@@ -17,7 +17,6 @@ RUN \
   dnf install -y neovim && \
   dnf install -y nano && \
   dnf install -y emacs && \
-  dnf install -y jed && \
   dnf install -y wget && \
   dnf install -y gcc && \
   dnf install -y neofetch && \
