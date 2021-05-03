@@ -21,4 +21,5 @@ bash ./connect_ubuntu_container.sh
 bash ./cleanup_ubuntu_container.sh
 ```
 
-
+### Useful commands
+[Visit this website.](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/)
