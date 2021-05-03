@@ -70,8 +70,9 @@ bash ./build_ros_container.sh
 
 When the container is started, it will share a folder with the host OS (mounted on the host under ~/catkin_ws). This folder is used as persistent storage and is also your catkin_ws folder. To init this folder run the setup_catkin_ws.sh script on the first run of the ros_container.
 ```bash
-git clone https://github.com/lennertfranssens/ros_container.git /home/ros/ros_container
+git clone https://github.com/lennertfranssens/containers.git /home/ros/ros_container
 cd /home/ros/ros_container
+git checkout ros
 bash ./setup_catkin_ws.sh # clones mapping repo and does a checkout to the rviz branch to test GUI redirect
 ```
 
