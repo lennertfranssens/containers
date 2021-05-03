@@ -35,3 +35,6 @@ git clone https://github.com/lennertfranssens/containers.git
 cd containers
 bash ./setup_bsys2_lab.sh
 ```
+
+### Useful commands
+[Visit this website.](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/)
