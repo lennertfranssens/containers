@@ -10,7 +10,7 @@ xhost +local:docker
 docker rm ubuntu_container
 docker rmi ubuntu_container
 docker build --build-arg PASSWORD=$PASSWORD -t ubuntu_container .
-docker run --name=ubuntu_container -ti -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/ubuntu_container_ws:/home/user ubuntu_container
+docker run --name=ubuntu_container -ti -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/ubuntu_container_home:/home/user ubuntu_container
 # stop container
 #docker stop ubuntu_container
 # remove container
