@@ -9,8 +9,6 @@ RUN \
   dnf -y update && \
   dnf install -y git && \
   git config --global credential.helper store && \
-  git config --global user.email $GIT_EMAIL && \
-  git config --global user.name $GIT_USERNAME  && \
   dnf install -y vim && \
   dnf install -y neovim && \
   dnf install -y nano && \
