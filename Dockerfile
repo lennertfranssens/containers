@@ -1,8 +1,6 @@
 FROM fedora:34
 
-ARG GIT_EMAIL
-ARG GIT_USERNAME
-ARG GIT_PASSWORD
+ARG PASSWORD
 
 USER root
 
@@ -25,15 +23,15 @@ RUN \
   dnf install -y firefox  
 
 # change root password
-RUN echo 'root:e=mc**2' | chpasswd
+RUN echo "root:$PASSWORD" | chpasswd
 
 # add user with GIT credentials
-RUN useradd -ms /bin/bash $GIT_USERNAME
-RUN echo "$GIT_USERNAME:$GIT_PASSWORD" | chpasswd
-RUN usermod -aG wheel $GIT_USERNAME
+#RUN useradd -ms /bin/bash user
+#RUN echo "user:$PASSWORD" | chpasswd
+#RUN usermod -aG wheel user
+#USER user
+#WORKDIR /home/user
 
-USER $GIT_USERNAME
-WORKDIR /home/$GIT_USERNAME
-
-# download os lab
-RUN git clone https://$GIT_USERNAME:$GIT_PASSWORD@github.ugent.be/lefranss-besturingssystemen2/lab.git /home/$GIT_USERNAME/bsys2/lab
+# change working directory
+RUN mkdir /home/user
+WORKDIR /home/user
