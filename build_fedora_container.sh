@@ -3,6 +3,9 @@
 printf 'User password: '
 read PASSWORD
 
+# This permits the root user on the local machine to connect to X windows display
+xhost +local:docker
+
 docker rm fedora_container
 docker rmi fedora_container
 docker build --build-arg PASSWORD=$PASSWORD -t fedora_container .
