@@ -8,6 +8,7 @@ USER root
 RUN \
   dnf -y update && \
   dnf install -y man-db && \
+  dnf install -y man-pages && \
   dnf install -y git && \
   git config --global credential.helper store && \
   dnf install -y vim && \
