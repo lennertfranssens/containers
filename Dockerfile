@@ -18,7 +18,13 @@ RUN \
   dnf install -y neofetch && \
   dnf install -y strace && \
   dnf install -y valgrind && \
-  dnf install -y firefox  
+  dnf install -y firefox
+
+# install manpages
+RUN sed -i '/tsflags=nodocs/d' /etc/dnf/dnf.conf && \
+  dnf reinstall $(dnf list --installed | awk '{print $1}') && \
+  dnf install -y man-db && \
+  dnf install -y man-pages
 
 # change root password
 RUN echo "root:$PASSWORD" | chpasswd
