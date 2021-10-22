@@ -1,7 +1,7 @@
 #!/bin/bash
 
-docker stop ubuntu_container
+docker stop building_container
 # remove container
-#docker rm ubuntu_container
+#docker rm building_container
 # remove all images
 #docker rmi -f $(docker images -a -q)

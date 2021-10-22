@@ -3,10 +3,10 @@
 # This permits the root user on the local machine to connect to X windows display
 xhost +local:docker
 
-docker start -i ubuntu_container
+docker start -i building_container
 # stop container
-#docker stop ubuntu_container
+#docker stop building_container
 # remove container
-#docker rm ubuntu_container
+#docker rm building_container
 # remove all images
 #docker rmi -f $(docker images -a -q)
